@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Android-parallaxrefresh by devsoulwolf</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Android-parallaxrefresh</h1>
+      <h2 class="project-tagline">This is a drop-down head View supports parallax effect, support refresh libraries！</h2>
+      <a href="https://github.com/devsoulwolf/Android-ParallaxRefresh" class="btn">View on GitHub</a>
+      <a href="https://github.com/devsoulwolf/Android-ParallaxRefresh/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/devsoulwolf/Android-ParallaxRefresh/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="android-parallaxrefresh" class="anchor" href="#android-parallaxrefresh" aria-hidden="true"><span class="octicon octicon-link"></span></a>Android-ParallaxRefresh</h1>
+
+<p>This is a drop-down head View supports parallax effect, support refresh libraries！ If you have any questions in the course or suggestions, please send an e-mail to the following e-mail, thank you!</p>
+
+<p>For more information please see <a href="http://devsoulwolf.github.io/Android-ParallaxRefresh">the website</a></p>
+
+<h2>
+<a id="screenshots" class="anchor" href="#screenshots" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screenshots</h2>
+
+<p><img src="https://img.alicdn.com/imgextra/i3/1025192026/TB2pBIHeVXXXXb3XXXXXXXXXXXX_!!1025192026.gif" alt="Sample">
+<img src="https://img.alicdn.com/imgextra/i4/1025192026/TB2yYAweVXXXXaIXpXXXXXXXXXX_!!1025192026.gif" alt="Sample"></p>
+
+<h2>
+<a id="android-parallaxrefresh-with-xml-code" class="anchor" href="#android-parallaxrefresh-with-xml-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Android-ParallaxRefresh with xml code</h2>
+
+<div class="highlight highlight-xml"><pre>    // ListView
+    &lt;<span class="pl-ent">net</span>.soulwolf.widget.parallaxrefresh.ParallaxScrollLayout
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>@+id/parallax<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>&gt;
+
+        &lt;<span class="pl-ent">net</span>.soulwolf.widget.parallaxrefresh.widget.ParallaxListView
+            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>@+id/list<span class="pl-pds">"</span></span>
+            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>/&gt;
+
+    &lt;/<span class="pl-ent">net</span>.soulwolf.widget.parallaxrefresh.ParallaxScrollLayout&gt;
+
+    // ScrollView
+    &lt;<span class="pl-ent">net</span>.soulwolf.widget.parallaxrefresh.ParallaxScrollLayout
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>@+id/parallax<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>&gt;
+
+        &lt;<span class="pl-ent">net</span>.soulwolf.widget.parallaxrefresh.widget.ParallaxScrollView
+            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>&gt;
+
+            &lt;<span class="pl-ent">FrameLayout</span>
+                <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+                <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+                <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">background</span>=<span class="pl-s"><span class="pl-pds">"</span>@android:color/white<span class="pl-pds">"</span></span>&gt;
+
+                &lt;<span class="pl-ent">android</span>.support.v7.widget.CardView <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">card_view</span>=<span class="pl-s"><span class="pl-pds">"</span>http://schemas.android.com/apk/res-auto<span class="pl-pds">"</span></span>
+                    <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+                    <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
+                    <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_margin</span>=<span class="pl-s"><span class="pl-pds">"</span>5dp<span class="pl-pds">"</span></span>
+                    <span class="pl-e">card_view</span><span class="pl-e">:</span><span class="pl-e">cardBackgroundColor</span>=<span class="pl-s"><span class="pl-pds">"</span>@color/sample_primary<span class="pl-pds">"</span></span>
+                    <span class="pl-e">card_view</span><span class="pl-e">:</span><span class="pl-e">cardCornerRadius</span>=<span class="pl-s"><span class="pl-pds">"</span>10dp<span class="pl-pds">"</span></span>&gt;
+
+                    &lt;<span class="pl-ent">TextView</span>
+                        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+                        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
+                        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">padding</span>=<span class="pl-s"><span class="pl-pds">"</span>@dimen/activity_horizontal_margin<span class="pl-pds">"</span></span>
+                        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">text</span>=<span class="pl-s"><span class="pl-pds">"</span>@string/card_text<span class="pl-pds">"</span></span>
+                        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">textColor</span>=<span class="pl-s"><span class="pl-pds">"</span>@android:color/white<span class="pl-pds">"</span></span>
+                        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">textSize</span>=<span class="pl-s"><span class="pl-pds">"</span>16sp<span class="pl-pds">"</span></span> /&gt;
+
+                &lt;/<span class="pl-ent">android</span>.support.v7.widget.CardView&gt;
+            &lt;/<span class="pl-ent">FrameLayout</span>&gt;
+        &lt;/<span class="pl-ent">net</span>.soulwolf.widget.parallaxrefresh.widget.ParallaxScrollView&gt;
+
+    &lt;/<span class="pl-ent">net</span>.soulwolf.widget.parallaxrefresh.ParallaxScrollLayout&gt; </pre></div>
+
+<h2>
+<a id="android-parallaxrefresh-with-java-code" class="anchor" href="#android-parallaxrefresh-with-java-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Android-ParallaxRefresh with java code</h2>
+
+<div class="highlight highlight-java"><pre>    <span class="pl-c">// ParallaxHolder</span>
+    <span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">SimpleParallaxHolder</span> <span class="pl-k">extends</span> <span class="pl-e">BaseParallaxHolder</span> {
+
+        <span class="pl-k">@Override</span>
+        <span class="pl-k">public</span> <span class="pl-k">int</span> <span class="pl-en">getParallaxTop</span>() {
+            <span class="pl-k">return</span> (<span class="pl-k">int</span>) (getRealHeight() <span class="pl-k">*</span> <span class="pl-c1">.1f</span>);
+        }
+
+
+        <span class="pl-k">@Override</span>
+        <span class="pl-k">public</span> <span class="pl-k">int</span> <span class="pl-en">getParallaxBottom</span>() {
+            <span class="pl-k">return</span> (<span class="pl-k">int</span>) (getRealHeight() <span class="pl-k">*</span> <span class="pl-c1">.4f</span>);
+        }
+
+        <span class="pl-k">@Override</span>
+        <span class="pl-k">protected</span> <span class="pl-smi">View</span> <span class="pl-en">onCreateView</span>(<span class="pl-smi">LayoutInflater</span> <span class="pl-v">inflater</span>, <span class="pl-smi">ViewGroup</span> <span class="pl-v">container</span>, <span class="pl-k">boolean</span> <span class="pl-v">attachRoot</span>) {
+            <span class="pl-k">return</span> inflater<span class="pl-k">.</span>inflate(<span class="pl-smi">R</span><span class="pl-k">.</span>layout<span class="pl-k">.</span>simple_parallax_holder,container,attachRoot);
+        }
+
+        <span class="pl-k">@Override</span>
+        <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onCreate</span>(<span class="pl-smi">Context</span> <span class="pl-v">context</span>) {
+            <span class="pl-v">super</span><span class="pl-k">.</span>onCreate(context);
+        }
+
+        <span class="pl-k">@Override</span>
+        <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onMeasured</span>(<span class="pl-k">int</span> <span class="pl-v">width</span>, <span class="pl-k">int</span> <span class="pl-v">height</span>) {
+            <span class="pl-v">super</span><span class="pl-k">.</span>onMeasured(width, height);
+        }
+
+        <span class="pl-k">@Override</span>
+        <span class="pl-k">public</span> <span class="pl-k">int</span> <span class="pl-en">getRealWidth</span>() {
+            <span class="pl-k">return</span> <span class="pl-v">super</span><span class="pl-k">.</span>getRealWidth();
+        }
+
+        <span class="pl-k">@Override</span>
+        <span class="pl-k">public</span> <span class="pl-k">int</span> <span class="pl-en">getRealHeight</span>() {
+            <span class="pl-k">return</span> <span class="pl-v">super</span><span class="pl-k">.</span>getRealHeight();
+        }
+
+        <span class="pl-k">@Override</span>
+        <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onScrollChanged</span>(<span class="pl-k">int</span> <span class="pl-v">scrollX</span>, <span class="pl-k">int</span> <span class="pl-v">scrollY</span>, <span class="pl-k">boolean</span> <span class="pl-v">isTouchEvent</span>) {
+            <span class="pl-v">super</span><span class="pl-k">.</span>onScrollChanged(scrollX, scrollY, isTouchEvent);
+        }
+
+        <span class="pl-k">@Override</span>
+        <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onRollback</span>() {
+            <span class="pl-v">super</span><span class="pl-k">.</span>onRollback();
+        }
+
+        <span class="pl-k">@Override</span>
+        <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onDestroy</span>() {
+            <span class="pl-v">super</span><span class="pl-k">.</span>onDestroy();
+        }
+
+        <span class="pl-k">@Override</span>
+        <span class="pl-k">public</span> <span class="pl-smi">View</span> <span class="pl-en">getContentView</span>() {
+            <span class="pl-k">return</span> <span class="pl-v">super</span><span class="pl-k">.</span>getContentView();
+        }
+    }
+
+    <span class="pl-c">// ListView And ScrollView</span>
+    <span class="pl-smi">ParallaxScrollLayout</span> mParallaxScrollLayout <span class="pl-k">=</span> (<span class="pl-smi">ParallaxScrollLayout</span>) findViewById(<span class="pl-smi">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>parallax);
+        mListView <span class="pl-k">=</span> (<span class="pl-smi">ListView</span>) findViewById(<span class="pl-smi">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>list);
+        mParallaxScrollLayout<span class="pl-k">.</span>setParallaxHolder(<span class="pl-k">new</span> <span class="pl-smi">SimpleParallaxHolder</span>());
+        mParallaxScrollLayout<span class="pl-k">.</span>setRefreshRatio(<span class="pl-c1">.8f</span>);
+        mParallaxScrollLayout<span class="pl-k">.</span>setOnRefreshListener(<span class="pl-v">this</span>);
+
+    <span class="pl-c">// OnRefreshListener</span>
+    <span class="pl-smi">OnRefreshListener</span> listener <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">OnRefreshListener</span>(){
+
+        <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onRefresh</span>(){
+            <span class="pl-c">// refresh</span>
+        }
+
+    };</pre></div>
+
+<h2>
+<a id="attr-params--info" class="anchor" href="#attr-params--info" aria-hidden="true"><span class="octicon octicon-link"></span></a>Attr params  info</h2>
+
+<table>
+    <tbody>
+        <tr>
+            <td><em>attrName</em></td>
+            <td><em>Explanation</em></td>
+        </tr>
+        <tr>
+            <td>psvParallaxMode</td>
+            <td>This parameter indicates whether or not to follow the head View scroll through the list, the default scroll (scroll)</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>
+<a id="implementing-view" class="anchor" href="#implementing-view" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implementing View!</h2>
+
+<p></p><ul>
+    <li>ParallaxScrollView</li>
+    <li>ParallaxListView</li>
+ </ul>
+
+<h2>
+<a id="custom" class="anchor" href="#custom" aria-hidden="true"><span class="octicon octicon-link"></span></a>Custom</h2>
+
+<div class="highlight highlight-java"><pre>    <span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">ParallaxListView</span> <span class="pl-k">extends</span> <span class="pl-e">ListView</span> <span class="pl-k">implements</span> <span class="pl-e">ParallaxScrollObserver</span>, <span class="pl-e">AbsListView</span>.<span class="pl-e">OnScrollListener</span> {
+
+        <span class="pl-k">private</span> <span class="pl-smi">ParallaxScrollCallback</span> mParallaxScrollCallback;
+        <span class="pl-k">private</span> <span class="pl-k">int</span> mScrollY;
+        <span class="pl-k">private</span> <span class="pl-smi">OnScrollListener</span> mDelegateOnScrollListener;
+
+        <span class="pl-k">public</span> <span class="pl-en">ParallaxListView</span>(<span class="pl-smi">Context</span> <span class="pl-v">context</span>) {
+            <span class="pl-v">super</span>(context);
+            initialize();
+        }
+
+        <span class="pl-k">public</span> <span class="pl-en">ParallaxListView</span>(<span class="pl-smi">Context</span> <span class="pl-v">context</span>, <span class="pl-smi">AttributeSet</span> <span class="pl-v">attrs</span>) {
+            <span class="pl-v">super</span>(context, attrs);
+            initialize();
+        }
+
+        <span class="pl-k">public</span> <span class="pl-en">ParallaxListView</span>(<span class="pl-smi">Context</span> <span class="pl-v">context</span>, <span class="pl-smi">AttributeSet</span> <span class="pl-v">attrs</span>, <span class="pl-k">int</span> <span class="pl-v">defStyleAttr</span>) {
+            <span class="pl-v">super</span>(context, attrs, defStyleAttr);
+            initialize();
+        }
+
+        <span class="pl-k">@TargetApi</span>(<span class="pl-smi">Build</span><span class="pl-c1"><span class="pl-k">.</span>VERSION_CODES<span class="pl-k">.</span>LOLLIPOP</span>)
+        <span class="pl-k">public</span> <span class="pl-en">ParallaxListView</span>(<span class="pl-smi">Context</span> <span class="pl-v">context</span>, <span class="pl-smi">AttributeSet</span> <span class="pl-v">attrs</span>, <span class="pl-k">int</span> <span class="pl-v">defStyleAttr</span>, <span class="pl-k">int</span> <span class="pl-v">defStyleRes</span>) {
+            <span class="pl-v">super</span>(context, attrs, defStyleAttr, defStyleRes);
+            initialize();
+        }
+
+        <span class="pl-k">private</span> <span class="pl-k">void</span> <span class="pl-en">initialize</span>() {
+            <span class="pl-v">super</span><span class="pl-k">.</span>setOnScrollListener(<span class="pl-v">this</span>);
+        }
+
+        <span class="pl-k">@Override</span>
+        <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">setScrollCallback</span>(<span class="pl-k">@NonNull</span> <span class="pl-smi">ParallaxScrollCallback</span> <span class="pl-v">callback</span>) {
+            <span class="pl-v">this</span><span class="pl-k">.</span>mParallaxScrollCallback <span class="pl-k">=</span> callback;
+        }
+
+        <span class="pl-k">@Override</span>
+        <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">setPlaceholder</span>(<span class="pl-k">@NonNull</span> <span class="pl-smi">View</span> <span class="pl-v">view</span>) {
+            removeHeaderView(view);
+            addHeaderView(view);
+        }
+
+        <span class="pl-k">@Override</span>
+        <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">setOnScrollListener</span>(<span class="pl-smi">OnScrollListener</span> <span class="pl-v">l</span>) {
+            <span class="pl-v">this</span><span class="pl-k">.</span>mDelegateOnScrollListener <span class="pl-k">=</span> l;
+        }
+
+        <span class="pl-k">private</span> <span class="pl-k">int</span> <span class="pl-en">getRealScrollY</span>() {
+            <span class="pl-smi">View</span> c <span class="pl-k">=</span> getChildCount() <span class="pl-k">&gt;</span> <span class="pl-c1">0</span> <span class="pl-k">?</span> getChildAt(<span class="pl-c1">0</span>) <span class="pl-k">:</span> <span class="pl-c1">null</span>;
+            <span class="pl-k">if</span> (c <span class="pl-k">==</span> <span class="pl-c1">null</span>) {
+                <span class="pl-k">return</span> <span class="pl-c1">0</span>;
+            }
+            <span class="pl-k">int</span> firstVisiblePosition <span class="pl-k">=</span> getFirstVisiblePosition();
+            <span class="pl-k">int</span> top <span class="pl-k">=</span> c<span class="pl-k">.</span>getTop();
+            <span class="pl-k">return</span> <span class="pl-k">-</span>top <span class="pl-k">+</span> firstVisiblePosition <span class="pl-k">*</span> c<span class="pl-k">.</span>getHeight() ;
+        }
+
+        <span class="pl-k">@Override</span>
+        <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onScrollStateChanged</span>(<span class="pl-smi">AbsListView</span> <span class="pl-v">view</span>, <span class="pl-k">int</span> <span class="pl-v">scrollState</span>) {
+            <span class="pl-k">if</span>(mDelegateOnScrollListener <span class="pl-k">!=</span> <span class="pl-c1">null</span>){
+                mDelegateOnScrollListener<span class="pl-k">.</span>onScrollStateChanged(view,scrollState);
+            }
+        }
+
+        <span class="pl-k">@Override</span>
+        <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onScroll</span>(<span class="pl-smi">AbsListView</span> <span class="pl-v">view</span>, <span class="pl-k">int</span> <span class="pl-v">firstVisibleItem</span>, <span class="pl-k">int</span> <span class="pl-v">visibleItemCount</span>, <span class="pl-k">int</span> <span class="pl-v">totalItemCount</span>) {
+            <span class="pl-k">int</span> realScrollY <span class="pl-k">=</span> getRealScrollY();
+            <span class="pl-k">if</span>(mParallaxScrollCallback <span class="pl-k">!=</span> <span class="pl-c1">null</span> <span class="pl-k">&amp;&amp;</span> realScrollY <span class="pl-k">!=</span> mScrollY){
+                mParallaxScrollCallback<span class="pl-k">.</span>onParallaxScrollChanged(<span class="pl-c1">0</span>,realScrollY,<span class="pl-c1">true</span>);
+                mScrollY <span class="pl-k">=</span> realScrollY;
+            }
+            <span class="pl-k">if</span>(mDelegateOnScrollListener <span class="pl-k">!=</span> <span class="pl-c1">null</span>){
+                mDelegateOnScrollListener<span class="pl-k">.</span>onScroll(view,firstVisibleItem,visibleItemCount,totalItemCount);
+            }
+        }
+    }</pre></div>
+
+<h2>
+<a id="maven" class="anchor" href="#maven" aria-hidden="true"><span class="octicon octicon-link"></span></a>Maven</h2>
+
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;net.soulwolf.widget&lt;/groupId&gt;
+    &lt;url&gt;https://dl.bintray.com/soulwolf/maven&lt;/url&gt;
+    &lt;artifactId&gt;parallaxRefresh&lt;/artifactId&gt;
+    &lt;version&gt;1.0.0&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<h2>
+<a id="gradle" class="anchor" href="#gradle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gradle</h2>
+
+<pre><code>allprojects {
+   repositories {
+      jcenter()
+   }
+}
+
+compile 'net.soulwolf.widget:parallaxRefresh:1.0.0'
+</code></pre>
+
+<h2>
+<a id="developed-by" class="anchor" href="#developed-by" aria-hidden="true"><span class="octicon octicon-link"></span></a>Developed by</h2>
+
+<p>Ching Soulwolf - <a href="mailto:Ching.Soulwolf@gmail.com">Ching.Soulwolf@gmail.com</a></p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<pre><code>Copyright 2015 Soulwolf Ching
+Copyright 2015 The Android Open Source Project for Android-ParallaxRefresh
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</code></pre>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/devsoulwolf/Android-ParallaxRefresh">Android-parallaxrefresh</a> is maintained by <a href="https://github.com/devsoulwolf">devsoulwolf</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("parallaxrefresh");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
